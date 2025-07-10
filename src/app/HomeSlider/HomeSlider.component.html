@@ -1,0 +1,51 @@
+<div class="relative w-full h-[80vh] sm:h-[90vh] lg:h-screen bg-cover bg-center flex items-center justify-center" [ngStyle]="{
+    'background-image': 'linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(' + slides[currentIndex] + ')'
+  }">
+
+    <div class="px-4  text-center ">
+        <div class="flex items-center group justify-center gap-5 mb-6">
+            <div
+                class="before:block before:w-16 sm:before:w-20 md:before:w-24 lg:before:w-28 before:h-[3px]  md:before:h-[4px] lg:before:h-[5px]
+             before:bg-primary before:rounded-lg before:content-[''] before:me-4 before:scale-x-50 before:origin-left before:transition-transform before:duration-300 group-hover:before:scale-x-100">
+            </div>
+
+            <p class="text-2xl sm:text-4xl leading-[64px] text-white font-bold">
+                With you in <br> Every Success
+            </p>
+
+            <div class="after:block after:w-16 sm:after:w-20 md:after:w-24 lg:after:w-28 
+         after:h-[3px] md:after:h-[4px] lg:after:h-[5px] 
+         after:bg-primary after:rounded-lg after:content-[''] 
+         after:ms-4 after:scale-x-50 after:origin-right 
+         after:transition-transform after:duration-300 
+         group-hover:after:scale-x-100">
+            </div>
+
+
+        </div>
+        <div class="flex justify-center ">
+            <button
+                class="bg-primary text-white group/button xl:w-64 lg:w-56 md:w-48 w-40 h-10 sm:h-14 rounded-full flex items-center justify-center gap-2 hover:bg-black hover:text-white    ">
+                <span
+                    class="transition-transform text-sm sm:text-base duration-300 gro group-hover/button:-translate-x-2">
+                    Apply Now
+
+                </span>
+                <i
+                    class="fa-solid  fa-chevron-right transition-transform duration-300 group-hover/button:translate-x-2"></i>
+
+            </button>
+        </div>
+
+
+    </div>
+
+    <button (click)="prevSlide()"
+        class="absolute  h-10 sm:h-12 w-10 sm:w-12 left-2 sm:left-4 top-1/2  transform -translate-y-1/2 bg-white text-primary rounded-full hover:bg-opacity-75">
+        <i class="fa-solid text-xl fa-chevron-left"></i>
+    </button>
+    <button (click)="nextSlide()"
+        class="absolute w-10 sm:w-12  sm:right-4  h-10 sm:h-12 top-1/2 right-2 transform -translate-y-1/2 bg-white text-primary rounded-full hover:bg-opacity-75">
+        <i class="fa-solid text-xl fa-chevron-right"></i>
+    </button>
+</div>
