@@ -1,0 +1,19 @@
+<nav 
+    class="bg-white rounded-full lg:px-8 lg:py-3 font-font1 md:px-0 md:py-0 py-1 px-2 shadow-lg  lg:w-[1000px] xl:w-[1265px] md:w-[788px] justify-center h-20 mx-auto flex  items-center ">
+        <ul class="flex items-center justify-center gap-2   xl:gap-12">
+
+      
+        <li *ngFor="let link of navlinks"><a href="#"
+                class="lg:px-3 lg:py-4 px-2 py:2  rounded-full hover:text-primary active:bg-black active:text-white">{{link.label}}</a>
+        </li>
+
+        <li class="relative group"><a href="#" class="hover:text-primary transition">E
+                <i class="fa-solid text-xs fa-chevron-down"></i></a>
+            <ul
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-40 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <li><a href="#" class="block lg:px-3 lg:py-4 px-2 py:2 hover:bg-gray-100">ع</a></li>
+
+            </ul>
+        </li>
+    </ul>
+</nav>

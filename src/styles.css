@@ -9,3 +9,8 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+ /* na m4 moktn3a bal font da an hwa font 1 4kl l 's' mo5tlf w m4 3rfa agyb font 1 da mnen */
+@font-face {
+    font-family:'font1';
+    src: url('./assets/Fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Regular.ttf');
+}

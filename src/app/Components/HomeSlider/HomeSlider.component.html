@@ -1,0 +1,56 @@
+<div class="relative w-full h-[80vh] sm:h-[100vh] lg:h-screen bg-cover bg-center flex flex-col justify-center"
+  [ngStyle]="{
+    'background-image': 'url(' + slides[currentIndex] + ')'
+  }">
+
+  <div class="flex items-center justify-between w-full max-w-7xl px-4 mx-auto">
+    
+    <!-- Left arrow -->
+    <button (click)="prevSlide()"
+      class="h-8 md:h-12 w-8 md:w-12 bg-white text-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
+      <img src="assets/images/redLeftArrow.svg" alt="left arrow" class="w-3 md:w-4"/>
+    </button>
+
+    <!-- l content mn 8ir l zorar -->
+    <div class="text-center max-w-2xl mx-auto">
+      <div class="flex items-center group justify-center gap-5">
+        <div
+          class="before:block before:w-10 sm:before:w-20  md:before:w-24 lg:before:w-28 before:h-[3px] md:before:h-[4px] lg:before:h-[5px]
+          before:bg-primary before:rounded-lg before:content-[''] before:me-4 before:scale-x-50 before:origin-left before:transition-transform before:duration-300 group-hover:before:scale-x-100">
+        </div>
+
+        <p class="   md:leading-[64px] text-center text-sm sm:text-xl md:text-3xl xl:text-4xl text-white font-bold">
+          With you in <br> Every Success
+        </p>
+
+        <div
+          class="after:block after:w-10 sm:after:w-20 md:after:w-24 lg:after:w-28 
+          after:h-[3px] md:after:h-[4px] lg:after:h-[5px] 
+          after:bg-primary after:rounded-lg after:content-[''] 
+          after:ms-4 after:scale-x-50 after:origin-right 
+          after:transition-transform after:duration-300 
+          group-hover:after:scale-x-100">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right arrow -->
+    <button (click)="nextSlide()"
+      class="h-8 md:h-12 w-8 md:w-12 bg-white text-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
+      <img src="assets/images/redRightArrow.svg" alt="right arrow" class="w-3 md:w-4" />
+    </button>
+  </div>
+
+  <!-- zorarr-->
+  <div class="mt-8 flex justify-center">
+    <button
+      class="bg-primary text-white group/button xl:w-64 lg:w-56 md:w-48 w-40 h-10 sm:h-14 rounded-full flex items-center justify-center gap-2 hover:bg-black hover:text-white">
+      <span class="transition-transform text-sm sm:text-base md:text-xl duration-300 group-hover/button:-translate-x-2">
+        Apply Now
+      </span>
+      <img src="assets/images/whiteRightArrow.svg"
+        class="transition-transform duration-300 group-hover/button:translate-x-2" alt="arrow" class="w-3 md:w-4"/>
+    </button>
+  </div>
+
+</div>

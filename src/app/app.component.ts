@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "./navbar/navbar.component";
-import { HomeSliderComponent } from "./HomeSlider/HomeSlider.component";
-import { SecondryNavbarComponent } from "./secondry-navbar/secondry-navbar.component";
-import { HomeComponent } from "./home/home.component";
+import { NavbarComponent } from "./Components/navbar/navbar.component";
+import { HomeSliderComponent } from "./Components/HomeSlider/HomeSlider.component";
+import { SecondryNavbarComponent } from "./Components/secondry-navbar/secondry-navbar.component";
+import { HomeComponent } from "./Components/home/home.component";
 
 @Component({
   selector: 'app-root',
