@@ -1,0 +1,23 @@
+<div class="flex items-center mb-8 group justify-center gap-5">
+  <div
+    class="before:block before:w-10 sm:before:w-20 md:before:w-24 lg:before:w-28 
+    before:h-[3px] md:before:h-[4px] lg:before:h-[5px]
+    before:rounded-lg before:content-[''] before:me-4 
+    before:scale-x-50 before:origin-left 
+    before:transition-transform before:duration-300 group-hover:before:scale-x-100"
+    [ngClass]="color">
+  </div>
+
+  <h2 class="text-center text-sm sm:text-xl md:text-3xl xl:text-4xl font-bold text-primary">
+    {{ title }}
+  </h2>
+
+  <div
+    class="after:block after:w-10 sm:after:w-20 md:after:w-24 lg:after:w-28 
+    after:h-[3px] md:after:h-[4px] lg:after:h-[5px] 
+    after:rounded-lg after:content-[''] after:ms-4 
+    after:scale-x-50 after:origin-right 
+    after:transition-transform after:duration-300 group-hover:after:scale-x-100"
+    [ngClass]="color">
+  </div>
+</div>

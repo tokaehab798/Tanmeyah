@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SectionTitleComponent } from "../../section-title/section-title.component";
 
 @Component({
   selector: 'app-who-we-are',
-  imports: [],
+  imports: [SectionTitleComponent],
   templateUrl: './who-we-are.component.html',
   styleUrl: './who-we-are.component.css'
 })
