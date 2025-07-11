@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from "../navbar/navbar.component";
+import { SectionTitleComponent } from "../section-title/section-title.component";
 
 @Component({
   selector: 'app-HomeSlider',
-  imports: [ CommonModule],
+  imports: [CommonModule, SectionTitleComponent],
   templateUrl: './HomeSlider.component.html',
   styleUrl: './HomeSlider.component.css'
 })
