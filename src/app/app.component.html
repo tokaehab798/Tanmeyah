@@ -1,10 +1,13 @@
+<div class="relative z-50">
+  <div class="fixed top-0 left-0 right-0 z-40">
+    <app-navbar />
+  </div>
 
-<div class="relative">
-  <app-navbar />
-  <div class="absolute top-[calc(100%-40px)] w-full left-1/2 -translate-x-1/2 z-50">
-    <div class="hidden lg:block">
-      <app-secondry-navbar />
-    </div>
+  <div class="fixed top-[80px] left-0 right-0 z-50 hidden lg:block">
+    <app-secondry-navbar />
   </div>
 </div>
-<app-home/>
+
+<div class="">
+  <app-home />
+</div>
