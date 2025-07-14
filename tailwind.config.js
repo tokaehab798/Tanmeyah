@@ -17,10 +17,12 @@ module.exports = {
 
 
       colors: {
-        primary: '#EC2227;',
+        primary: '#EC2227',
         yellow: '#EBBC24',
+        grey: '#F6F6F6',
+        darkgrey:'#666666',
       }
     },
   },
-  plugins: [],
+
 }

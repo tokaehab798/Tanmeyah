@@ -1,9 +1,9 @@
-<div class="relative w-full h-[80vh] sm:h-[100vh] lg:h-screen bg-cover bg-center flex flex-col justify-center"
+<section  class="relative w-full h-[80vh] sm:h-[100vh] lg:h-screen bg-cover bg-center flex flex-col justify-center"
   [ngStyle]="{
     'background-image': 'url(' + slides[currentIndex] + ')'
   }">
 
-  <div class="flex items-center justify-between w-full max-w-7xl px-4 mx-auto">
+  <div class="flex items-center justify-between w-full px-6 mx-auto">
     
     <!-- Left arrow -->
     <button (click)="prevSlide()"
@@ -12,7 +12,7 @@
     </button>
 
     <!-- l content mn 8ir l zorar -->
-    <div class="text-center max-w-2xl mx-auto">
+<div class="text-center w-[521px] mx-auto">
       <div class="flex items-center group justify-center gap-5">
         <div
           class="before:block before:w-10 sm:before:w-20  md:before:w-24 lg:before:w-28 before:h-[3px] md:before:h-[4px] lg:before:h-[5px]
@@ -49,9 +49,9 @@
       <span class="transition-transform text-sm sm:text-base md:text-xl duration-300 group-hover/button:-translate-x-2">
         Apply Now
       </span>
-      <img src="assets/images/whiteRightArrow.svg"
+      <img src="assets/images/whiteButtonArrow.svg"
         class="transition-transform duration-300 group-hover/button:translate-x-2 w-3 md:w-4" alt="arrow" />
     </button>
   </div>
 
-</div>
+</section>

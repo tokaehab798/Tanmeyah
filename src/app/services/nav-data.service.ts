@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class NavDataService {
 
 navLinks = [
+    { label: 'HOME', href: '#Home' },
     { label: 'ABOUT US', href: '#' },
     { label: 'OUR PRODUCT', href: '#' },
     { label: 'NEWSROOM', href: '#' },

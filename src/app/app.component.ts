@@ -5,9 +5,10 @@ import { HomeSliderComponent } from "./Components/HomeSlider/HomeSlider.componen
 import { SecondryNavbarComponent } from "./Components/secondry-navbar/secondry-navbar.component";
 import { HomeComponent } from "./Components/home/home.component";
 
+
 @Component({
   selector: 'app-root',
-  imports: [ HomeComponent],
+  imports: [HomeComponent, SecondryNavbarComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

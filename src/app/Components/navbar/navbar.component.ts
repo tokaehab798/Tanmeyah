@@ -16,6 +16,9 @@ socialIcons = [
   { icon: 'instagram' },
   { icon: 'youtube' }
 ];
+
+
+
 navlinks= inject(NavDataService).navLinks
   
 isOpen = false;
