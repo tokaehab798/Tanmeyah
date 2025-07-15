@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule , TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-HomeSlider',
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './HomeSlider.component.html',
   styleUrl: './HomeSlider.component.css'
 })
@@ -23,5 +24,16 @@ export class HomeSliderComponent {
   prevSlide() {
     this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
   }
+
+
+    currentLang: string = '';
+
+  constructor(protected translate: TranslateService) {
+    this.currentLang = this.translate.currentLang 
+ console.log(this.currentLang);
+ 
+  }
+
+
 }
 

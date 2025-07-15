@@ -18,5 +18,7 @@ export class SecondryNavbarComponent {
     this.translate.use(newLang);
     localStorage.setItem('appLang', newLang);
     document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = newLang === 'ar' ? 'ar' : 'en';
+
   }
 }

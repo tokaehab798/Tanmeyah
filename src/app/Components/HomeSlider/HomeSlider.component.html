@@ -1,33 +1,35 @@
-<section  class="relative w-full h-[80vh] sm:h-[100vh] lg:h-screen bg-cover bg-center flex flex-col justify-center"
+<section class="relative w-full h-[80vh] sm:h-[100vh] lg:h-screen bg-cover bg-center flex flex-col justify-center"
   [ngStyle]="{
     'background-image': 'url(' + slides[currentIndex] + ')'
   }">
 
-  <div class="flex items-center justify-between w-full px-6 mx-auto">
-    
+  <div class="flex items-center justify-between w-full px-4 md:px-6 mx-auto">
+
     <!-- Left arrow -->
     <button (click)="prevSlide()"
-      class="h-8 md:h-12 w-8 md:w-12 border-none outline-none bg-white text-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
-      <img src="assets/images/redLeftArrow.svg" alt="left arrow" class="w-3 md:w-4"/>
+      class="h-8 w-8 md:h-12 md:w-12 2xl:h-20 2xl:w-20  border-none outline-none bg-white text-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
+      <img src="assets/images/redLeftArrow.svg" alt="left arrow" class="w-2 md:w-4  ButtonsTransform" />
     </button>
 
     <!-- l content mn 8ir l zorar -->
-<div class="text-center w-[521px] mx-auto">
-      <div class="flex items-center group justify-center gap-5">
-        <div
+    <div class="text-center  mx-auto">
+      <div class="flex items-center group justify-center gap-5 ">
+        <div [ngClass]="{}"
           class="before:block before:w-10 sm:before:w-20  md:before:w-24 lg:before:w-28 before:h-[3px] md:before:h-[4px] lg:before:h-[5px]
-          before:bg-primary before:rounded-lg before:content-[''] before:me-4 before:scale-x-50 before:origin-left before:transition-transform before:duration-300 group-hover:before:scale-x-100">
+
+          before:bg-primary before:rounded-lg before:content-[''] before:me-4 before:scale-x-50 before:origin-left before:transition-transform before:duration-300 group-hover:before:scale-x-100 scaleTransform">
         </div>
 
-        <p class="   md:leading-[64px] text-center  text-lg sm:text-xl md:text-2xl xl:text-3xl text-white font-bold">
+        <p
+          class="    text-center  sm:text-xl md:text-2xl lg:text-3xl 2xl:text-[55px] 2xl:leading-[70px] lg:leading-10 md:leading-10  text-white font-bold">
           With you in <br> Every Success
         </p>
 
-        <div
-          class="after:block after:w-10 sm:after:w-20 md:after:w-24 lg:after:w-28 
+        <div class="after:block after:w-10 sm:after:w-20 md:after:w-24 lg:after:w-28 
           after:h-[3px] md:after:h-[4px] lg:after:h-[5px] 
           after:bg-primary after:rounded-lg after:content-[''] 
           after:ms-4 after:scale-x-50 after:origin-right 
+          scaleTransform
           after:transition-transform after:duration-300 
           group-hover:after:scale-x-100">
         </div>
@@ -37,20 +39,22 @@
 
     <!-- Right arrow -->
     <button (click)="nextSlide()"
-      class="h-8 md:h-12 w-8 md:w-12 border-none outline-none bg-white text-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
-      <img src="assets/images/redRightArrow.svg" alt="right arrow" class="w-3 md:w-4" />
+      class="h-8 w-8 md:h-12 md:w-12 2xl:h-20 2xl:w-20 border-none outline-none bg-white  text-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
+      <img src="assets/images/redRightArrow.svg" alt="right arrow" class="w-2 md:w-4 ButtonsTransform " />
     </button>
   </div>
-
   <!-- zorarr-->
-  <div class="mt-8 flex justify-center">
+  <div class="lg:mt-8 mt-3 flex justify-center">
     <button
-      class="bg-primary text-white group/button xl:w-64 lg:w-56 md:w-48 w-40 h-10 sm:h-14 rounded-full flex items-center justify-center gap-2 hover:bg-black hover:text-white">
-      <span class="transition-transform text-sm sm:text-base md:text-xl duration-300 group-hover/button:-translate-x-2">
-        Apply Now
+      class="bg-primary text-white group/button lg:px-8 lg:py-2 xl:px-11 xl:py-3 2xl:px-20 2xl:py-5 md:px-9 md:py-2 px-5 py-2 sm:py-[2px] rounded-full flex items-center justify-center gap-2 hover:bg-black hover:text-white">
+      <span
+        [ngClass]="translate.currentLang === 'ar' ? 'group-hover/button:translate-x-2' : 'group-hover/button:-translate-x-2'"
+        class="transition-transform text-sm sm:text-base md:text-xl 2xl:text-2xl duration-300  ">
+        {{ 'APPLY-NOW' | translate }}
       </span>
-      <img src="assets/images/whiteButtonArrow.svg"
-        class="transition-transform duration-300 group-hover/button:translate-x-2 w-3 md:w-4" alt="arrow" />
+      <img [src]="translate.currentLang=== 'ar'? '../../../assets/images/whiteLeftArrow.svg' : '../../../assets/images/whiteRightArrow.svg'"
+        [ngClass]="translate.currentLang === 'ar' ? 'group-hover/button:-translate-x-2' : 'group-hover/button:translate-x-2 '"
+        class="transition-transform duration-300 w-3 md:w-4   " alt="arrow" />
     </button>
   </div>
 

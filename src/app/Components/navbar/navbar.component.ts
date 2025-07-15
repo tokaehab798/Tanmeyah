@@ -46,6 +46,7 @@ constructor(public translate: TranslateService) {
   this.translate.use(this.currentLang);
   localStorage.setItem('appLang', this.currentLang);
   document.documentElement.dir = this.currentLang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang=this.currentLang === 'ar' ? 'ar' : 'en'
   this.menuPosition = this.currentLang === 'ar' ? 'left' : 'right';
   this.closeMenu()
 }
