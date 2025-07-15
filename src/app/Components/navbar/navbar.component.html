@@ -46,9 +46,9 @@
     'left-0': menuPosition === 'left'
   }">
 
-        <div class="p-4  ">
-            <button (click)="closeMenu()" [ngClass]="currentLang === 'ar' ? '-translate-x-52' : 'translate-x-52'"
-                class="text-gray-600 translate-x-52 hover:text-red-600">
+        <div class="p-4 flex justify-end " >
+            <button (click)="closeMenu()" 
+                class="text-gray-600  hover:text-red-600">
                 <i class="fa-solid fa-xmark text-2xl"></i>
             </button>
         </div>
@@ -58,7 +58,7 @@
                 class="block text-gray-700 text-base hover:text-primary transition">
                 {{ link.label | translate }}
             </a>
-            <div class="mt-4 pt-2 flex justify-center gap-4 ">
+            <div class="mt-4 pt-2 flex justify-start gap-4 ">
 
                 <div class="mt-4 pt-2 flex justify-center">
                     <button (click)="toggleLang()"
