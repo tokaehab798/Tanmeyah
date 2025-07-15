@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-section-title',
@@ -10,5 +11,6 @@ import { Component, Input } from '@angular/core';
 export class SectionTitleComponent {
    @Input() title: string = '';
   @Input() color: string = 'bg-yellow';
+
 
 }

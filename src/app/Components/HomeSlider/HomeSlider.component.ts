@@ -30,7 +30,6 @@ export class HomeSliderComponent {
 
   constructor(protected translate: TranslateService) {
     this.currentLang = this.translate.currentLang 
- console.log(this.currentLang);
  
   }
 

@@ -1,16 +1,19 @@
 {
   "TITLE": "Welcome",
-  
-    "LANG_BUTTON": "ع",
-      "HOME": "HOME",
-    "ABOUT US": "ABOUT US",
-    "OUR PRODUCT": "OUR PRODUCT",
-    "NEWSROOM": "NEWSROOM",
-    "SUSTAINABILITY": "SUSTAINABILITY",
-    "LEADERSHIP": "LEADERSHIP",
-    "CAREERS": "CAREERS",
-    "CONTACT US": "CONTACT US",
-   "APPLY-NOW": "Apply Now",
+  "LANG_BUTTON": "ع",
+  "HOME": "HOME",
+  "ABOUT-US": "ABOUT US",
+  "OUR-PRODUCT": "OUR PRODUCTS",
+  "NEWSROOM": "NEWSROOM",
+  "SUSTAINABILITY": "SUSTAINABILITY",
+  "LEADERSHIP": "LEADERSHIP",
+  "CAREERS": "CAREERS",
+  "CONTACT US": "CONTACT US",
+  "APPLY-NOW": "Apply Now",
   "JOIN-OUR-TEAM": "Join our team",
-  "Who We Are?" :"Who We Are?"
-  }
+  "READ-MORE": "Read More",
+  "LEARN-MORE": "Learn More",
+  "ABOUT_US": "About Us",
+  "OUR_PRODUCTS": "Our products",
+  "WHO-WE-ARE": "Who We Are?"
+}

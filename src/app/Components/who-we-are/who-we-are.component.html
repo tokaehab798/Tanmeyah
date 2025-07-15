@@ -1,13 +1,14 @@
-<section class=" flex justify-center items-center ">
-    <div class="w-[90%] drop-shadow-[3px_3px_6px_rgba(0,0,0,0.25)] rounded-[35px] bg-white pt-7 px-5  md:py-10 md:px-10 -translate-y-20">
+<section class=" flex justify-center  ">
+    <div
+        class="w-[90%] drop-shadow-[3px_3px_6px_rgba(0,0,0,0.25)] rounded-[35px] bg-white pt-7 px-5  md:py-10 md:px-10 -translate-y-20">
         <div class="flex items-center justify-center ">
             <div>
-                <app-section-title [title]="'Who We Are?'"
-                    [color]="'before:bg-yellow after:bg-yellow'"></app-section-title>
+                <app-section-title [title]="'WHO-WE-ARE' | translate" [color]="'before:bg-yellow after:bg-yellow'"></app-section-title>
 
                 <div class="flex lg:flex-row items-center flex-col-reverse  ">
-                    <div class="w-full lg:w-[55%]">
-                        <p class="text-justify py-1 text-xs sm:text-base md:text-lg ">Tanmeyah is one of Egypt’s leading
+                    <div class=" lg:w-[60%]">
+                        <p class="text-justify py-1 text-xs sm:text-base md:text-lg 2xl:text-2xl ">Tanmeyah is one of
+                            Egypt’s leading
                             providers of financial services
                             with
                             a
@@ -28,20 +29,23 @@
                             and
                             individuals through branches in the heart of its communities.</p>
                         <button
-                            class="bg-primary text-white transition-colors duration-300 mb-5 sm:mb-4  hover:bg-black  rounded-full mt-4  w-28 sm:w-32 md:w-36 lg:w-[171px]  h-10 text-xs sm:text-base ">Read
-                            More
+                            class="bg-primary text-white transition-colors duration-300 mb-5 sm:mb-4  hover:bg-black  rounded-full mt-4  w-28 sm:w-32 md:w-36 lg:w-[171px]  h-10 text-xs sm:text-base ">{{'READ-MORE'|
+                            translate}}
                             <i class="fa-solid  fa-chevron-right text-xs ms-1 lg:text-sm "></i>
                         </button>
+
                     </div>
                     <div
-                        class="w-64 sm:w-80 md:w-[420px] lg:w-[450px] xl:w-[465px]  h-56 sm:h-80 md:h-[380px] lg:h-[400px] xl:h-[416px] relative flex group/image justify-center items-center overflow-visible">
+                        class="relative lg:w-[40%]  mb-3 flex justify-center items-start md:items-center group/image mx-auto">
+                        <img src="assets/images/Image2.svg" alt="Main Image"
+                            class="w-[60%] rounded-lg  transition-transform duration-500 will-change-transform
+ group-hover/image:translate-y-[5%]" />
 
-                        <img src="assets/images/Image2.svg" alt=""
-                            class="rounded-lg w-44 sm:w-56 md:w-64 lg:w-68 xl:w-72  h-44 sm:h-56 md:h-64 lg:h-68 xl:h-72 object-cover transition-transform duration-500 group-hover/image:translate-y-[10%]" />
-
-                        <img src="assets/images/Image1.svg" alt=""
-                            class="rounded-lg w-32 sm:w-40 md:w-48 lg:w-52 xl:w-56 h-[130px] sm:h-[160px] md:h-[190px] lg:h-[205px] xl:h-[220px]  absolute top-0 right-0 transition-transform duration-500 group-hover/image:translate-x-[10%] " />
+                        <img src="assets/images/Image1.svg" alt="Overlay Image"
+                            class="absolute -top-[12%] right-[5%] w-[45%] sm:w-[40%] rounded-lg will-change-transform
+ transition-transform duration-500 group-hover/image:translate-x-[10%]" />
                     </div>
+
 
 
                 </div>

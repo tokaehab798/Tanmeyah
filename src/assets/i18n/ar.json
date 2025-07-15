@@ -2,8 +2,8 @@
   "TITLE": "مرحبًا",
   "LANG_BUTTON": "E",
   "HOME": "الرئيسية",
-  "ABOUT US": "من نحن",
-  "OUR PRODUCT": "منتجاتنا",
+  "ABOUT-US": "من نحن",
+  "OUR-PRODUCT": "منتجاتنا",
   "NEWSROOM": "الأخبار",
   "SUSTAINABILITY": "الاستدامة",
   "LEADERSHIP": "القيادة",
@@ -11,5 +11,9 @@
   "CONTACT US": "تواصل معنا",
   "APPLY-NOW": "قدّم الآن",
   "JOIN-OUR-TEAM": "انضم إلى فريقنا",
-  "Who-We-Are?": "من نحن؟"
+  "READ-MORE": "اقراء المزيد",
+  "LEARN-MORE": "اعرف المزيد",
+  "WHO-WE-ARE": "من نحن؟",
+    "ABOUT_US": "من نحن",
+  "OUR_PRODUCTS": "منتجاتنا"
 }

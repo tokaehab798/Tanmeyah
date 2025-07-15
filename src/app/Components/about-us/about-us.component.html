@@ -1,43 +1,47 @@
 <!-- lw 3iza nos l card bs l yban 5li l width f l small 80% -->
-<section class="relative  w-[90%]  mx-auto flex flex-col items-center justify-center">
-  <app-section-title [title]="'About Us'" [color]="'before:bg-yellow after:bg-yellow'"></app-section-title>
+<section class="relative  w-[90%]   mx-auto flex flex-col items-center justify-center">
+<app-section-title [title]="'ABOUT_US' | translate" [color]="'before:bg-yellow after:bg-yellow'"></app-section-title>
 
-  <div class="relative w-full mt-2 px-4">
+  <div class="relative w-full mt-3 2xl:mt-10 px-4">
     <!-- Left arrow -->
     <button (click)="prevCard()"
-      class="absolute left-0 top-1/2 border-none outline-none -translate-y-1/2 z-10 sm:w-10 sm:h-10 lg:w-12  lg:h-12 w-8 h-8 bg-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
-      <img src="assets/images/whiteLeftArrow.svg" alt="left arrow" class="w-3 md:w-4 " />
+      class="absolute left-0 top-1/2 border-none outline-none -translate-y-1/2 z-10 sm:w-10 sm:h-10 lg:w-12  lg:h-12 w-8 h-8 2xl:w-20 2xl:h-20 bg-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
+      <img src="assets/images/whiteLeftArrow.svg" alt="left arrow" class="w-3 md:w-4 2xl:w-6 " />
     </button>
 
     <!-- Cards  -->
-    <div class="flex gap-10 justify-center  overflow-hidden md:overflow-visible ">
+    <div class="flex gap-2 md:gap-5 justify-center   md:overflow-visible ">
       <div *ngFor="let card of cards; let i = index"
-        [ngClass]="i === 1 ? 'scale-[1.2] z-10 mb-12 mt-6' : 'scale-100 opacity-30 md:opacity-100'"
-        class="bg-white rounded-md py-2 w-[270px] sm:w-[290px] lg:w-[398px] text-center mb-6 drop-shadow-md transition-transform duration-300">
+        [ngClass]="i === 1 ? 'scale-[1.2] z-10' : 'scale-100 opacity-30 md:opacity-100'"
+        class="bg-white rounded-md py-2 w-1/3 text-center mb-6 drop-shadow-md transition-transform duration-300">
 
-        <div class="relative px-2 mb-2 ">
+        <div class="relative px-2 mb-2 2xl:px-3  ">
           <img [src]="card.image" alt="Card Image" class="   mb-2  w-full object-cover " />
           <img src="../../../assets/images/aboutUS/aboutUsCurveShape.svg" class="absolute top-0  h-full  left-0" alt="">
         </div>
-        <h3 class="text-sm md:text-lg font-semibold mb-4">{{ card.title }}</h3>
+        <h3 class="text-xs sm:text-sm md:text-lg 2xl:text-3xl line-clamp-1 font-semibold  mb-4">{{ card.title }}</h3>
         <!-- apply button -->
         <div class=" flex  justify-center ">
-          <button
-            class="bg-primary text-white group/button xl:w-40 lg:w-38 md:w-36 w-32 h-8 md:h-10 rounded-full flex items-center justify-center gap-2 hover:bg-black hover:text-white">
-            <span class="transition-transform text-sm duration-300 group-hover/button:-translate-x-2">
-              Apply Now
-            </span>
-            <img src="assets/images/whiteButtonArrow.svg"
-              class="transition-transform duration-300 group-hover/button:translate-x-2 w-3 md:w-4" alt="arrow" />
-          </button>
+        <button
+          class="bg-primary text-white group/button px-2 py-1 sm:px-4 sm:py-2 md:px-5 md:py-1  lg:px-8 xl:px-10 xl:py-3 2xl:px-12 2xl:py-4  rounded-full flex items-center justify-center sm:gap-2 gap-1 hover:bg-black hover:text-white">
+          <span
+            [ngClass]="translate.currentLang === 'ar' ? 'sm:group-hover/button:translate-x-2 group-hover/button:translate-x-1' : 'group-hover/button:-translate-x-1 sm:group-hover/button:-translate-x-2'"
+            class="transition-transform text-[8px] sm:text-base md:text-xl 2xl:text-2xl duration-300  ">
+            {{ 'LEARN-MORE' | translate }}
+          </span>
+          <img src="../.././../assets/images/whiteButtonArrow.svg"
+            [ngClass]="translate.currentLang === 'ar' ? 'sm:group-hover/button:-translate-x-2 group-hover/button:-translate-x-1 rotate-180 ' : 'sm:group-hover/button:translate-x-2 group-hover/button:translate-x-1'"
+            class="transition-transform duration-300 w-2 sm:w-3 md:w-4  " alt="arrow" />
+        </button>
         </div>
       </div>
     </div>
 
     <!-- Right arrow -->
     <button (click)="nextCard()"
-      class="absolute right-0 top-1/2 border-none outline-none -translate-y-1/2 z-10 sm:w-10 sm:h-10 lg:w-12  lg:h-12 w-8 h-8 bg-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
-      <img src="../../../assets/images/whiteRightArrow.svg" alt="right arrow" class="w-3 md:w-4 " />
+      class="absolute right-0 top-1/2 border-none outline-none -translate-y-1/2 z-10 sm:w-10 sm:h-10 lg:w-12  lg:h-12 w-8 h-8 2xl:w-20 2xl:h-20 bg-primary rounded-full hover:bg-opacity-75 flex items-center justify-center">
+      <img src="../../../assets/images/whiteRightArrow.svg" alt="right arrow" class="w-3 md:w-4 2xl:w-6 " />
     </button>
+    
   </div>
 </section>

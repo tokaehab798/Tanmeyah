@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SectionTitleComponent } from "../section-title/section-title.component";
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-us',
-  imports: [SectionTitleComponent, CommonModule],
+  imports: [SectionTitleComponent, CommonModule,TranslateModule],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })
@@ -34,6 +35,11 @@ export class AboutUsComponent {
     // kda na maska a5er element f l array b pop w ha7oto f l awwal b unshift
     let last = this.cards.pop();
     if (last) this.cards.unshift(last);
+  }
+  currentLang=''
+  constructor(protected translate :TranslateService){
+    this.currentLang=this.translate.currentLang
+
   }
 
 }
