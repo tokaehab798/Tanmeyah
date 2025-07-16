@@ -15,14 +15,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class OurProductsComponent implements AfterViewChecked {
   cards = inject(OurproductService).cards;
-
+  private swiperInstance: Swiper | null = null;
   private swiperInitialized = false;
 
   ngAfterViewChecked(): void {
     if (!this.swiperInitialized && this.cards.length > 0) {
-      new Swiper('.swiper', {
+      this.swiperInstance = new Swiper('.swiper', {
         slidesPerGroup: 1,
         loop: true,
+        mousewheel: { forceToAxis: true },
         centeredSlides: false,
         keyboard: { enabled: true },
         autoplay: {
@@ -32,23 +33,38 @@ export class OurProductsComponent implements AfterViewChecked {
         speed: 900,
         spaceBetween: 8,
         breakpoints: {
-          320: { slidesPerView: 1.9 },   
-          425: { slidesPerView: 2.2 },  
-          640: { slidesPerView: 2.7 },   
-          768: { slidesPerView: 3.1 },  
-          1024: { slidesPerView: 3.7 },    
-          1366: { slidesPerView: 4.5 },  
-          1440: { slidesPerView: 5 },    
+          320: { slidesPerView: 1.9 },
+          425: { slidesPerView: 2.2 },
+          640: { slidesPerView: 2.7 },
+          768: { slidesPerView: 3.1 },
+          1024: { slidesPerView: 3.7 },
+          1366: { slidesPerView: 4.5 },
+          1440: { slidesPerView: 5 },
           1920: { slidesPerView: 5.5 },
-          2000:{slidesPerView:8}   
+          2000: { slidesPerView: 8 }
         }
       });
-      this.swiperInitialized = true; 
+
+      this.swiperInitialized = true;
     }
   }
 
+
   currentLang = ''
-  constructor(protected translate : TranslateService){
-    this.currentLang=this.translate.currentLang
+  constructor(protected translate: TranslateService) {
+    this.currentLang = this.translate.currentLang;
+
+    this.translate.onLangChange.subscribe(() => {
+      this.currentLang = this.translate.currentLang;
+
+      if (this.swiperInstance) {
+        this.swiperInstance.destroy(true, true); 
+        this.swiperInstance = null;
+      }
+
+      this.swiperInitialized = false; 
+    });
   }
+
+
 }

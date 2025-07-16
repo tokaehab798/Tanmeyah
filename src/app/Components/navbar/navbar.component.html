@@ -2,8 +2,7 @@
     <nav
         class="  md:px-4  md:py-1 lg:py-4 2xl:px-12 2xl:py-6  py-4 px-2 w-[90%] sm:w-[80%]   mx-auto flex items-center justify-between">
         <div class="flex items-center">
-            <img src="assets/images/TanmeyahLogoWhite.svg" alt="Logo"
-                class=" w-[4rem]  md:w-28 lg-w-32 2xl:w-52 " />
+            <img src="assets/images/TanmeyahLogoWhite.svg" alt="Logo" class=" w-[4rem]  md:w-28 lg-w-32 2xl:w-52 " />
         </div>
 
         <div class="flex items-center justify-between gap-2 sm:gap-10">
@@ -15,7 +14,7 @@
                 </button>
                 <button
                     class="border-white leading-3  sm:leading-3 lg:leading-3 text-xs md:text-sm   border-2 2xl:text-3xl 2xl:px-4 2xl:border-3 2xl:py-4 px-2 py-2 text-white  sm:px-4 lg:px-4 lg:py-3 md:px-3 md:py-2  rounded-full hover:bg-white hover:text-red-600 transition">
-                 {{   'JOIN-OUR-TEAM' | translate}}
+                    {{ 'JOIN-OUR-TEAM' | translate}}
                 </button>
 
                 <div class="gap-2 text-white text-xl items-center hidden lg:flex">
@@ -27,7 +26,6 @@
 
             </div>
             <div class="flex  lg:hidden" (click)="toggleMenu()">
-                <i class="fa-solid fa-bars text-white text-md sm:text-xl md:text-2xl   cursor-pointer"></i>
             </div>
         </div>
     </nav>
@@ -40,9 +38,8 @@
     'left-0': menuPosition === 'left'
   }">
 
-        <div class="p-4 flex justify-end " >
-            <button (click)="closeMenu()" 
-                class="text-gray-600  hover:text-red-600">
+        <div class="p-4 flex justify-end ">
+            <button (click)="closeMenu()" class="text-gray-600  hover:text-red-600">
                 <i class="fa-solid fa-xmark text-2xl"></i>
             </button>
         </div>
