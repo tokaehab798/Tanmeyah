@@ -31,9 +31,11 @@ export class OurProductsComponent implements AfterViewChecked {
           disableOnInteraction: false
         },
         speed: 900,
-        spaceBetween: 8,
         breakpoints: {
-          320: { slidesPerView: 1.9 },
+         
+
+          320: { slidesPerView: 1.6 },
+          375:{slidesPerView:1.9},
           425: { slidesPerView: 2.2 },
           640: { slidesPerView: 2.7 },
           768: { slidesPerView: 3.1 },
@@ -58,11 +60,11 @@ export class OurProductsComponent implements AfterViewChecked {
       this.currentLang = this.translate.currentLang;
 
       if (this.swiperInstance) {
-        this.swiperInstance.destroy(true, true); 
+        this.swiperInstance.destroy(true, true);
         this.swiperInstance = null;
       }
 
-      this.swiperInitialized = false; 
+      this.swiperInitialized = false;
     });
   }
 
