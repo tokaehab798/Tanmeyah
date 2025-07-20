@@ -1,0 +1,60 @@
+<section class="bg-primary flex py-8 items-center justify-center">
+    <div class=" w-full md:w-[90%]">
+        <app-section-title [title]="'SUCCESS_STORY' | translate" [color]="'before:bg-yellow after:bg-yellow'"
+            [titleColor]="'text-white'">
+        </app-section-title>
+
+        <div class="flex items-center ">
+
+            <!-- Left arrow -->
+            <button (click)="prevStory()"
+                class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20 bg-white rounded-full hover:bg-opacity-75 flex items-center justify-center ButtonsTransform shrink-0"
+            >
+                <img src="assets/images/yellowLeftArrow.svg" alt="left arrow" class="w-3 md:w-4 2xl:w-6" />
+            </button>
+
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-4  w-full"
+                *ngIf="SuccessStories[currentIndex] as story">
+
+                <div class="w-full lg:w-[45%]">
+                    <p class="text-justify text-white text-xs md:text-base">{{ story.paragraph }}</p>
+                    <button class="mt-4 text-yellow hover:underline font-medium text-sm">Load More &gt;</button>
+                </div>
+
+                <div class="w-full lg:w-[45%] justify-center">
+                    <div class="flex justify-center items-center gap-4">
+
+                        <!-- Left Person -->
+                        <div class="relative w-24 h-28  md:w-56 md:h-60 lg:w-56 lg:h-44 xl:w-56 xl:h-60  rounded-3xl overflow-hidden"
+                            *ngFor="let person of story.personLeft">
+                            <img [src]="person.image" class="object-cover w-full h-full" />
+                            <div class="absolute bottom-0 left-0 right-0 py-1 sm:py-2 text-center bg-white">
+                                <p class="text-[10px] sm:text-xs md:text-sm lg:text-base">{{ person.name }}</p>
+                            </div>
+                        </div>
+
+
+                        <!-- Right People -->
+                        <div class="flex flex-col space-y-4">
+                            <div class="relative  w-24 h-28  md:w-56 md:h-60 lg:w-48 lg:h-44 xl:w-56 xl:h-60  rounded-3xl overflow-hidden"
+                                *ngFor="let person of story.peopleRight">
+                                <img [src]="person.image" class="object-cover w-full h-full" />
+                                <div class="absolute bottom-0 left-0 right-0 py-1 sm:py-2 text-center bg-white">
+                                    <p class="text-[10px] sm:text-xs md:text-sm lg:text-base">{{ person.name }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right arrow -->
+            <button (click)="nextStory()"
+                class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20 bg-white rounded-full hover:bg-opacity-75 flex items-center justify-center  ButtonsTransform shrink-0">
+                <img src="assets/images/yellowRightArrow.svg" alt="right arrow" class="w-3 md:w-4 2xl:w-6" />
+            </button>
+        </div>
+    </div>
+</section>

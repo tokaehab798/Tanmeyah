@@ -11,6 +11,8 @@ import { TranslateService } from '@ngx-translate/core';
 export class SectionTitleComponent {
    @Input() title: string = '';
   @Input() color: string = 'bg-yellow';
+    @Input() titleColor: string = 'text-primary';
+
 
 
 }

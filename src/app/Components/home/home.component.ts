@@ -3,10 +3,11 @@ import { HomeSliderComponent } from "../HomeSlider/HomeSlider.component";
 import { WhoWeAreComponent } from "../who-we-are/who-we-are.component";
 import { AboutUsComponent } from "../about-us/about-us.component";
 import { OurProductsComponent } from "../our-products/our-products.component";
+import { SuccessStoriesComponent } from "../success-stories/success-stories.component";
 
 @Component({
   selector: 'app-home',
-  imports: [ HomeSliderComponent, WhoWeAreComponent, AboutUsComponent, OurProductsComponent],
+  imports: [HomeSliderComponent, WhoWeAreComponent, AboutUsComponent, OurProductsComponent, SuccessStoriesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
