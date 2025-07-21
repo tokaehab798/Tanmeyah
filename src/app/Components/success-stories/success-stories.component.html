@@ -8,53 +8,68 @@
 
             <!-- Left arrow -->
             <button (click)="prevStory()"
-                class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20 bg-white rounded-full hover:bg-opacity-75 flex items-center justify-center ButtonsTransform shrink-0"
-            >
+                class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20 border-none outline-none  bg-white rounded-full hover:bg-opacity-75 flex items-center justify-center ButtonsTransform shrink-0">
                 <img src="assets/images/yellowLeftArrow.svg" alt="left arrow" class="w-3 md:w-4 2xl:w-6" />
             </button>
 
-            <div class="flex flex-col-reverse lg:flex-row items-center justify-center gap-4  w-full"
+            <div class="flex flex-col-reverse px-3  lg:flex-row items-center justify-center gap-10 md:gap-20  w-full"
                 *ngIf="SuccessStories[currentIndex] as story">
 
                 <div class="w-full lg:w-[45%]">
-                    <p class="text-justify text-white text-xs md:text-base">{{ story.paragraph }}</p>
-                    <button class="mt-4 text-yellow hover:underline font-medium text-sm">Load More &gt;</button>
+                    <p class="text-justify text-white text-xs md:text-base 2xl:text-2xl ">{{ story.paragraph }}</p>
+                    <button class="mt-4 text-yellow hover:underline font-medium text-sm 2xl:text-lg">Load More &gt;</button>
                 </div>
 
-                <div class="w-full lg:w-[45%] justify-center">
-                    <div class="flex justify-center items-center gap-4">
-
-                        <!-- Left Person -->
-                        <div class="relative w-24 h-28  md:w-56 md:h-60 lg:w-56 lg:h-44 xl:w-56 xl:h-60  rounded-3xl overflow-hidden"
-                            *ngFor="let person of story.personLeft">
-                            <img [src]="person.image" class="object-cover w-full h-full" />
-                            <div class="absolute bottom-0 left-0 right-0 py-1 sm:py-2 text-center bg-white">
-                                <p class="text-[10px] sm:text-xs md:text-sm lg:text-base">{{ person.name }}</p>
-                            </div>
+                <div class=" grid grid-cols-2 items-center gap-8    ">
+                
+                    <div
+                        class=" relative w-28 h-32   md:w-56 md:h-60 lg:w-48 lg:h-44 xl:w-56 xl:h-60  2xl:w-64 2xl:h-64  rounded-3xl overflow-hidden">
+                        <img [src]="story.Images[0].image" class="object-cover w-full h-full" />
+                        <div class="absolute bottom-0 left-0 right-0 py-2 sm:py-4 text-center bg-white">
+                            <p class="text-[10px] sm:text-xs md:text-sm lg:text-base 2xl:text-xl font-bold">{{ story.Images[0].name }}</p>
                         </div>
-
-
-                        <!-- Right People -->
-                        <div class="flex flex-col space-y-4">
-                            <div class="relative  w-24 h-28  md:w-56 md:h-60 lg:w-48 lg:h-44 xl:w-56 xl:h-60  rounded-3xl overflow-hidden"
-                                *ngFor="let person of story.peopleRight">
-                                <img [src]="person.image" class="object-cover w-full h-full" />
-                                <div class="absolute bottom-0 left-0 right-0 py-1 sm:py-2 text-center bg-white">
-                                    <p class="text-[10px] sm:text-xs md:text-sm lg:text-base">{{ person.name }}</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <div class=" space-y-4 md:space-y-8">
+                        <div
+                            class="relative w-28 h-32  md:w-56 md:h-60 lg:w-48 lg:h-44 xl:w-56 xl:h-60  2xl:w-64 2xl:h-64 rounded-3xl overflow-hidden">
+                            <img [src]="story.Images[1].image" class="object-cover w-full h-full" />
+                            <div class="absolute bottom-0 left-0 right-0 py-2 sm:py-4 text-center bg-white">
+                                <p class="text-[10px] sm:text-xs md:text-sm lg:text-base 2xl:text-xl font-bold">{{story.Images[1].name}}</p>
+                            </div>
+                        </div>
+                        <div
+                            class="relative w-28 h-32 grid-cols-6  md:w-56 md:h-60 lg:w-48 lg:h-44 xl:w-56 xl:h-60  2xl:w-64 2xl:h-64 rounded-3xl overflow-hidden">
+                            <img [src]="story.Images[2].image" class="object-cover w-full h-full" />
+                            <div class="absolute bottom-0 left-0 right-0 py-2 sm:py-4 text-center bg-white">
+                                <p class="text-[10px] sm:text-xs md:text-sm lg:text-base 2xl:text-xl font-bold">{{ story.Images[2].name }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+
 
             </div>
 
+
+
+
             <!-- Right arrow -->
             <button (click)="nextStory()"
-                class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20 bg-white rounded-full hover:bg-opacity-75 flex items-center justify-center  ButtonsTransform shrink-0">
+                class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 2xl:w-20 2xl:h-20 border-none outline-none  bg-white rounded-full hover:bg-opacity-75 flex items-center justify-center  ButtonsTransform shrink-0">
                 <img src="assets/images/yellowRightArrow.svg" alt="right arrow" class="w-3 md:w-4 2xl:w-6" />
             </button>
+        </div>
+
+        <div class="flex justify-center mt-6 gap-2">
+            <ng-container *ngFor="let story of SuccessStories; let i = index">
+                <button (click)="currentIndex = i" class="w-2 h-2 rounded-full" [ngClass]="{
+        'bg-yellow w-[2%] ': currentIndex === i,
+        'bg-white opacity-50': currentIndex !== i
+      }"></button>
+            </ng-container>
         </div>
     </div>
 </section>
