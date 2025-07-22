@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { NavDataService } from '../../services/nav-data.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { LucideAngularModule ,Menu} from 'lucide-angular';
+import { LucideAngularModule, Menu, X } from 'lucide-angular';
 
 
 @Component({
   selector: 'app-navbar',
-  standalone:true,
-  imports: [CommonModule, TranslateModule,LucideAngularModule],
+  standalone: true,
+  imports: [CommonModule, TranslateModule, LucideAngularModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -17,17 +17,7 @@ export class NavbarComponent {
   menuPosition: 'left' | 'right' = 'right';
 
   readonly Menu = Menu;
-
-
-
-  socialIcons = [
-    { icon: 'facebook-f' },
-    { icon: 'linkedin-in' },
-    { icon: 'instagram' },
-    { icon: 'youtube' }
-  ];
-
-
+  readonly X = X;
 
   navlinks = inject(NavDataService).navLinks
 
