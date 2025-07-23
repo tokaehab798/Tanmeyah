@@ -7,7 +7,7 @@ module.exports = {
       backgroundImage: {
         'Main-image': "url('assets/images/mainBackground.svg')",
         'black-gradient': 'linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))',
-
+         'small-footer':"url('/assets/images/smallFooter.svg')"
 
       },
       fontFamily: {
